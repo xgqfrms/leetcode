@@ -31,6 +31,30 @@ const ListNode = (val) => {
     this.next = null;
 };
 
+// singly-linked list
+
+const SinglyLinkedList = (val) => {
+    this.head = null;
+    this.length = 0;
+};
+
+// add
+// remove
+// search
+
+
+// doubly-linked list
+
+const DoublyLinkedList = (val) => {
+    this.head = null;
+    this.length = 0;
+};
+
+// add
+// remove
+// search
+
+
 const addTwoNumbers = (l1, l2) => {
     let result = ``;
     return result;
