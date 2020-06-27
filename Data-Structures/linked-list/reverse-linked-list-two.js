@@ -16,12 +16,3 @@
  */
 
 const log = console.log;
-
-
-function reverseLinkedList(self, head) {
-  cur, prev = head, null;
-  while (cur) {
-    cur.next, prev, cur = prev, cur, cur.next;
-  }
-  return prev;
-}
