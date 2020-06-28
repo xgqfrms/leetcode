@@ -17,6 +17,7 @@
 
 const log = console.log;
 
+// reverse list
 
 function reverseLinkedList(self, head) {
   cur, prev = head, null;

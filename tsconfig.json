@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "sourceRoot": "./src",
+    "allowJs": true,
+    "checkJs": false,
+    "noImplicitAny": false,
+    "baseUrl": "./src",
+    "locale": "zh-CN",
+    "incremental": false
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "js-solutions/**/*",
+    "data-structures/**/*",
+    "000-xyz/**/*",
+    "test/**/*.spec.ts"
+  ]
+}

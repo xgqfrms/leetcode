@@ -26,10 +26,10 @@
     "editor.insertSpaces": true,
     "files.encoding": "utf8",
     "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
-    "[typescript]": {
-        "editor.formatOnSave": false,
-        "editor.formatOnPaste": false
-    },
+    // "[typescript]": {
+    //     "editor.formatOnSave": false,
+    //     "editor.formatOnPaste": false
+    // },
     "[javascript]": {
         "editor.formatOnSave": false,
         "editor.formatOnPaste": false,
