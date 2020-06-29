@@ -17,17 +17,25 @@
 
 const log = console.log;
 
-// Generator
 class BinarySearchTree {
   constructor() {
     this.left = null;
     this.right = null;
     this.root = null;
+    log(`init es6`)
+    // this.searchNode = searchNode;
   }
-  this.root = null;
+  // public, 原型方法, 不可枚举
+  search () {
+    log(`search, prototype methods`)
+  }
+  // public, 实例方法, 可以枚举
+  searchNode = function() {
+    log(`searchNode`)
+  }
 }
 
-
+// const bst = new BinarySearchTree();
 
 export default BinarySearchTree;
 
