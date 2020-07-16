@@ -24,14 +24,14 @@ function BinarySearchTree() {
   log(`init es5`)
   // public, 实例方法, 可以枚举
   this.search = function () {
-    //
+    log(`search`)
   }
   // private
   var searchNode = function () {
-    //
+    log(`search`)
   }
   function searchKey () {
-    //
+    log(`search`)
   }
 }
 
