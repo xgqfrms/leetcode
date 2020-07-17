@@ -8,8 +8,8 @@
  * @created 2020-07-17
  * @modified
  *
- * @description node.js cli & process.argv
- * @difficulty Easy
+ * @description permutation combination / 排列组合
+ * @difficulty Easy Medium Hard
  * @complexity O(n)
  * @augments
  * @example
@@ -19,13 +19,3 @@
  */
 
 const log = console.log;
-
-// 接受参数 process.argv\
-function test(args) {
-  log(`args =`, args)
-}
-
-const args = process.argv[2];
-test(args);
-
-// module.exports = test;

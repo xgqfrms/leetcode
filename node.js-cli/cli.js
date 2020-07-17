@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
-// console.log('hello world', arguments);
-console.log('hello world', process.argv[2]);
+const log = console.log;
 
+console.log(`arguments =`, arguments);
+console.log(`process.argv =`, process.argv[2]);
 
 
 /*
@@ -11,6 +12,5 @@ $ node cli abc;
 // hello world abc
 $ node cli.js abc
 // hello world abc
-
 
 */
