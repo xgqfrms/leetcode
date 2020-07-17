@@ -13,7 +13,7 @@
       " * @modified ",
       " * ",
       " * @description $2",
-      " * @difficult Easy Medium Hard",
+      " * @difficulty Easy Medium Hard",
       " * @complexity O(n)",
       " * @augments ",
       " * @example ",

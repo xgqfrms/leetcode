@@ -9,7 +9,7 @@
  * @modified
  *
  * @description 414. Third Maximum Number
- * @difficult Easy
+ * @difficulty Easy
  * @complexity O(n)
  * @augments
  * @example
