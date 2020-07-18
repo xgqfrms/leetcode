@@ -12,6 +12,7 @@
  * @augments
  * @example
  * @link https://leetcode.com/problems/valid-palindrome/
+ * @link https://leetcode.com/submissions/detail/368171836/
  *
  */
 
@@ -21,7 +22,7 @@ var isPalindrome = function(s = ``) {
   let str = s.trim().toLowerCase();
   let result = false;
   // regular expression
-  const reg = /[a-z]/ig;
+  const reg = /[a-z0-9]/;
   // const dict = `abcdefghijklmnopqrstuvwxyz`;
   // const begin = `a`.charCodeAt();
   // const end = `z`.charCodeAt();
@@ -40,20 +41,23 @@ var isPalindrome = function(s = ``) {
   // 65
   // `Z`.charCodeAt();
   // 90
-  const len = str.length;
-  if(len <= 1) {
+  // ✅ before filter length
+  if(s.length <= 1) {
     result = true;
   } else {
+    log(`\nstr =`, str);
     let temp = ``;
-    for (let i = 0; i < len; i++) {
+    for (let i = 0; i < str.length; i++) {
       if(reg.test(str[i])) {
-        temp += str[i]
+        // log(`str[${i}]`, str[i])
+        temp += str[i];
+      } else {
+        log(`ignore str[${i}]`, str[i])
       }
     }
     let reverse = temp.split(``).reverse().join(``);
-    log(`str =`, str)
     log(`temp =`, temp)
-    log(`reverse =`, temp)
+    log(`reverse =`, reverse)
     if(reverse === temp) {
       result = true;
     }
@@ -63,9 +67,11 @@ var isPalindrome = function(s = ``) {
 };
 
 
-isPalindrome(`A man, a plan, a canal: Panama`);
-isPalindrome(`race a car`);
-isPalindrome(``);
+// isPalindrome(`A man, a plan, a canal: Panama`);
+// isPalindrome(`race a car`);
+// isPalindrome(``);
+// number bug?
+isPalindrome("0P");
 
 // Input: "A man, a plan, a canal: Panama"
 // Output: true

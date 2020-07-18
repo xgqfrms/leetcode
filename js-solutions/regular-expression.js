@@ -20,11 +20,8 @@
 
 const log = console.log;
 
-
 // a~z
-
 const reg = /[a-z]/;
-
 
 reg.test(`a`);
 // true
