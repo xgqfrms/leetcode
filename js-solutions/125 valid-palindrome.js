@@ -17,17 +17,21 @@
 
 const log = console.log;
 
-var isPalindrome = function(s) {
+var isPalindrome = function(s = ``) {
+  let str = s.trim().toLowerCase();
   let result = false;
+  // regular expression
   const reg = /[a-z]/ig;
-  const dict = `abcdefghijklmnopqrstuvwxyz`;
-  const begin = `a`.charCodeAt();
-  const end = `z`.charCodeAt();
-  const dict = ``;
-  for (let i = 0; i < array.length; i++) {
-    const element = array[i];
-
-  }
+  // const dict = `abcdefghijklmnopqrstuvwxyz`;
+  // const begin = `a`.charCodeAt();
+  // const end = `z`.charCodeAt();
+  // let dict = ``;
+  // for (let i = begin; i < end; i++) {
+  //   dict += String.fromCharCode(i);
+  //   // dict += String.fromCodePoint(i);
+  // }
+  // log(`dict =`, dict);
+  // dict = abcdefghijklmnopqrstuvwxy
   // `a`.charCodeAt();
   // 97
   // `z`.charCodeAt();
@@ -36,18 +40,32 @@ var isPalindrome = function(s) {
   // 65
   // `Z`.charCodeAt();
   // 90
+  const len = str.length;
   if(len <= 1) {
     result = true;
   } else {
     let temp = ``;
-    for (let i = 0; i < s.length; i++) {
-      if(reg(s[i])) {
-        temp += s[i]
+    for (let i = 0; i < len; i++) {
+      if(reg.test(str[i])) {
+        temp += str[i]
       }
     }
+    let reverse = temp.split(``).reverse().join(``);
+    log(`str =`, str)
+    log(`temp =`, temp)
+    log(`reverse =`, temp)
+    if(reverse === temp) {
+      result = true;
+    }
   }
+  log(`\nresult`, result)
   return result;
 };
+
+
+isPalindrome(`A man, a plan, a canal: Panama`);
+isPalindrome(`race a car`);
+isPalindrome(``);
 
 // Input: "A man, a plan, a canal: Panama"
 // Output: true
