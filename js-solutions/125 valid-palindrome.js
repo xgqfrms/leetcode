@@ -45,16 +45,37 @@ var isPalindrome = function(s = ``) {
   if(s.length <= 1) {
     result = true;
   } else {
-    log(`\nstr =`, str);
+    // log(`\nstr =`, str);
     let temp = ``;
     for (let i = 0; i < str.length; i++) {
       if(reg.test(str[i])) {
         // log(`str[${i}]`, str[i])
         temp += str[i];
       } else {
-        log(`ignore str[${i}]`, str[i])
+        // log(`ignore str[${i}]`, str[i])
       }
     }
+    // 二分法
+    // let l = temp.length;
+    // let j = 0;
+    // while (l/2 >= j && !result) {
+    //   j++;
+    //   if(temp[j] === temp[l - j - 1]) {
+    //     result = true;
+    //   }
+    // }
+    // 二分法
+    // let l = temp.length;
+    // let ll = l % 2 > 0 ? Math.floor(l / 2) - 1 : Math.floor(l / 2);
+    // for (let j = 0; j < ll; j++) {
+    //   // log(`temp[j] =`, temp[j])
+    //   // log(`temp[l - j - 1] =`, temp[l - j - 1])
+    //   if(temp[j] === temp[l - j - 1]) {
+    //     result = true;
+    //   } else {
+    //     result = false;
+    //   }
+    // }
     let reverse = temp.split(``).reverse().join(``);
     log(`temp =`, temp)
     log(`reverse =`, reverse)
@@ -67,11 +88,12 @@ var isPalindrome = function(s = ``) {
 };
 
 
-// isPalindrome(`A man, a plan, a canal: Panama`);
-// isPalindrome(`race a car`);
-// isPalindrome(``);
+isPalindrome(`A man, a plan, a canal: Panama`);
+isPalindrome(`race a car`);
+isPalindrome(``);
 // number bug?
 isPalindrome("0P");
+isPalindrome("a.");
 
 // Input: "A man, a plan, a canal: Panama"
 // Output: true
