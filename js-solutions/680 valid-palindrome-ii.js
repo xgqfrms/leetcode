@@ -51,7 +51,7 @@ var validPalindrome = function(s = ``) {
 // const test2 = "abca";
 // const test3 = "abbdc";
 
-// bug ???
+// ❌ bug
 const test4 = "tebbem";// false
 // "tebbem" => "ebbem" "tbbem" "tebem" "tebem" "tebbm" "tebbe"
 
