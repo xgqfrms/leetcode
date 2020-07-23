@@ -30,10 +30,56 @@ var isPalindrome = function(num) {
   if(num < 0) {
     return false;
   } else {
-    // 双指针
     const len = Math.ceil(Math.log10(num + 1));
+    if (len <= 1) {
+      return true;
+    } else {
+      // 双指针
+      let left;
+      let right;
+      // num to array ???
+      // 123 => [1, 2, 3];
+    }
   }
 };
+
+function NumberToArray(num = 1) {
+  const result = [];
+  const len = Math.ceil(Math.log10(num + 1));
+  let temp = num;
+  for (let i = len; i > 0; i--) {
+    log(`\ntemp 1`, temp, len)
+    // 四舍五入 bug
+    log(`value =`, parseInt(temp / Math.pow(10, i - 1)), Math.pow(10, i - 1))
+    result.push(parseInt(temp / Math.pow(10, i - 1)));
+    log(`result[len - i]`, result[len - i], len - i, len, i)
+    log(`result[len - i] * Math.pow(10, i - 1)`, result[len - i] * Math.pow(10, i - 1))
+    temp -= result[len - i] * Math.pow(10, i - 1);
+    log(`temp`, temp)
+  }
+  // for (let i = len; i > 0; i--) {
+  //   log(`\ntemp 1`, temp, len)
+  //   // Math.round 四舍五入 bug
+  //   log(`value =`, Math.round(temp / Math.pow(10, i - 1)), Math.pow(10, i - 1))
+  //   result.push(Math.round(temp / Math.pow(10, i - 1)));
+  //   log(`result[len - i]`, result[len - i], len - i, len, i)
+  //   log(`result[len - i] * Math.pow(10, i - 1)`, result[len - i] * Math.pow(10, i - 1))
+  //   temp -= result[len - i] * Math.pow(10, i - 1);
+  //   log(`temp`, temp)
+  // }
+  // for (let i = len; i > 0; i--) {
+  //   log(`num % (i * 10)`, parseInt(num / Math.pow(10, i - 1)), Math.pow(10, i - 1))
+  //   result.push(parseInt(num / Math.pow(10, i - 1)));
+  // }
+  return result;
+}
+
+// const test = NumberToArray(123);
+// const test = NumberToArray(1234);
+// const test = NumberToArray(12345);
+const test = NumberToArray(1234567);
+
+log(`test`, test)
 
 
 // Math.ceil(Math.log10(1 + 1));
