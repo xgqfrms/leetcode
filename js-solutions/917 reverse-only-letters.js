@@ -13,16 +13,13 @@
  * @complexity O(n)
  * @augments
  * @example
- * @link
+ * @link https://leetcode.com/problems/reverse-only-letters/
  * @solutions
  *
  */
 
 const log = console.log;
 
-// S.length <= 100
-// 33 <= S[i].ASCIIcode <= 122
-// S doesn't contain \ or "
 
 
 const ReverseOnlyLetters = (str = ``) => {
@@ -31,14 +28,22 @@ const ReverseOnlyLetters = (str = ``) => {
   // return
 }
 
+/*
+Input: "ab-cd"
+Output: "dc-ba"
+Example 2:
 
-// Input: "ab-cd"
-// Output: "dc-ba"
-// Example 2:
+Input: "a-bC-dEf-ghIj"
+Output: "j-Ih-gfE-dCba"
+Example 3:
 
-// Input: "a-bC-dEf-ghIj"
-// Output: "j-Ih-gfE-dCba"
-// Example 3:
+Input: "Test1ng-Leet=code-Q!"
+Output: "Qedo1ct-eeLg=ntse-T!"
 
-// Input: "Test1ng-Leet=code-Q!"
-// Output: "Qedo1ct-eeLg=ntse-T!"
+S.length <= 100
+33 <= S[i].ASCIIcode <= 122
+S doesn't contain \ or "
+
+
+
+ */
