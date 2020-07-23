@@ -49,13 +49,13 @@ function NumberToArray(num = 1) {
   let temp = num;
   for (let i = len; i > 0; i--) {
     log(`\ntemp 1`, temp, len)
-    // 四舍五入 bug
-    log(`value =`, parseInt(temp / Math.pow(10, i - 1)), Math.pow(10, i - 1))
+    // Math.round 四舍五入 bug
+    // log(`value =`, parseInt(temp / Math.pow(10, i - 1)), Math.pow(10, i - 1))
     result.push(parseInt(temp / Math.pow(10, i - 1)));
     log(`result[len - i]`, result[len - i], len - i, len, i)
-    log(`result[len - i] * Math.pow(10, i - 1)`, result[len - i] * Math.pow(10, i - 1))
+    // log(`result[len - i] * Math.pow(10, i - 1)`, result[len - i] * Math.pow(10, i - 1))
     temp -= result[len - i] * Math.pow(10, i - 1);
-    log(`temp`, temp)
+    // log(`temp`, temp)
   }
   // for (let i = len; i > 0; i--) {
   //   log(`\ntemp 1`, temp, len)
