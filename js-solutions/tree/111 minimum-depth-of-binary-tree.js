@@ -20,7 +20,6 @@
 
 const log = console.log;
 
-
 /**
  * Definition for a binary tree node.
  * function TreeNode(val, left, right) {
