@@ -43,31 +43,30 @@ Explanation: 2 does not exist in nums so return -1
  * @return {number}
  */
 var search = function(nums, target) {
-  let left = 0;
-  let right = nums.length - 1;
-  while (left <= right) {
-    // left + 差值
-    let mid = left + Math.floor((right - left) / 2);
-    // log(`mid`, nums[mid])
-    if(nums[mid] === target) {
-      // nums[mid] 值
-      return nums.indexOf(nums[mid]);
-      // return true;
-    } else if(nums[mid] > target) {
-      right = mid - 1;
-    } else {
-      left = mid + 1;
+  let result = -1;
+  const len = nums.length;
+  if(len < 2) {
+    result = nums.indexOf(target);
+  } else {
+    let mid = nums[Math.floor(len / 2)];
+    let left = nums.slice(0, nums.indexOf(mid));
+    let right = nums.slice(nums.indexOf(target) + 1, len);
+    log(`left`, left)
+    log(`right`, right)
+    if (mid === target) {
+      result = nums.indexOf(target);
     }
+    // if (mid > target) {
+    //   result = search(left, target);
+    // } else {
+    //   // mid < target
+    //   result = search(right, target);
+    // }
   }
-  return -1;
-  // return false;
+  log(`result`, result);
+  return result;
 };
 
 
-const test = search([-1,0,3,5,9,12], 9);
-const test1 = search([-1,0,3,5,9,12], 2);
-
-log(test)
-log(test1)
-// 4
-// -1
+search([-1,0,3,5,9,12], 9);
+// search([-1,0,3,5,9,12], 2);
