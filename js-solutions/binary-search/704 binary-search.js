@@ -43,6 +43,9 @@ Explanation: 2 does not exist in nums so return -1
  * @return {number}
  */
 var search = function(nums, target) {
+  if(!nums.length) {
+    return -1;
+  }
   let left = 0;
   let right = nums.length - 1;
   while (left <= right) {
@@ -51,7 +54,8 @@ var search = function(nums, target) {
     // log(`mid`, nums[mid])
     if(nums[mid] === target) {
       // nums[mid] 值
-      return nums.indexOf(nums[mid]);
+      // return nums.indexOf(nums[mid]);
+      return mid;
       // return true;
     } else if(nums[mid] > target) {
       right = mid - 1;
