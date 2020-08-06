@@ -33,3 +33,13 @@ https://leetcode.com/problems/add-two-numbers/
 https://leetcode.com/problems/longest-substring-without-repeating-characters/
 
 https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
+
+
+## 46 全排列
+
+https://leetcode.com/problems/permutations/
+
+
+五毒神掌到底是啥？
+
+一道题做五遍
