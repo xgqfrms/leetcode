@@ -35,6 +35,33 @@ const log = console.log;
  * @param {number[]} nums
  * @return {number}
  */
+
+var singleNumber = function(nums) {
+  let len = nums.length;
+  // log(`len`, len)
+  // obj unique key
+  const obj = {};
+  while(len) {
+    const value = nums[len - 1];
+    if(obj[value] === undefined) {
+      obj[value] = 1;
+    } else {
+      obj[value] += 1;
+    }
+    len--;
+  }
+  // log(`\nkeys`, Object.keys(obj))
+  // log(`values`, Object.values(obj))
+  // log(`entries`, Object.entries(obj))
+  for (const key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      const item = obj[`${key}`];
+      if(item === 1) {
+        return key;
+      }
+    }
+  }
+};
 // var singleNumber = function(nums) {
 //   let len = nums.length;
 //   // js 两个数组的差集
@@ -49,64 +76,6 @@ const log = console.log;
 //     }
 //   }
 // };
-
-// var singleNumber = function(nums) {
-//   let len = nums.length;
-//   // log(`len`, len)
-//   // obj unique key
-//   const obj = {};
-//   while(len) {
-//     const value = nums[len - 1];
-//     if(obj[value] === undefined) {
-//       obj[value] = 1;
-//     } else {
-//       obj[value] += 1;
-//     }
-//     len--;
-//   }
-//   // log(`\nkeys`, Object.keys(obj))
-//   // log(`values`, Object.values(obj))
-//   // log(`entries`, Object.entries(obj))
-//   for (const key in obj) {
-//     if (obj.hasOwnProperty(key)) {
-//       const item = obj[`${key}`];
-//       if(item === 1) {
-//         return key;
-//       }
-//     }
-//   }
-// };
-
-// Bit Manipulation
-
-/*
-Concept
-
-If we take XOR of zero and some bit, it will return that bit
-a \oplus 0 = aa⊕0=a
-If we take XOR of two same bits, it will return 0
-a \oplus a = 0a⊕a=0
-a \oplus b \oplus a = (a \oplus a) \oplus b = 0 \oplus b = ba⊕b⊕a=(a⊕a)⊕b=0⊕b=b
-So we can XOR all bits together to find the unique number.
-
-*/
-// var singleNumber = function(nums) {
-//   let a = 0;
-//   for (const i of nums) {
-//     a ^= i;
-//   }
-//   return a;
-// };
-// Time complexity : O(n)
-// Space complexity : O(1)
-
-/**
- * @param {number[]} nums
- * @return {number}
- */
-var singleNumber = function(nums) {
-  return nums.reduce((sum, i) => sum ^ i, 0);
-};
 
 const test = [2,2,1];
 const result = singleNumber(test);
