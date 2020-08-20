@@ -22,92 +22,21 @@
 const log = console.log;
 
 
-// Math.ceil(Math.log10(1 + 1));
-// // 1
-// Math.ceil(Math.log10(0 + 1));
-// // 0
+// var isPalindrome = function(num) {
+//   if(num > -1) {
+//     const arr = Array.from(`${num}`);
+//     if(arr.join() === arr.reverse().join()) {
+//       return true;
+//     }
+//   }
+//   return false;
+// };
 
 
-const DigitsArrayToNumber = (arr = []) => {
-  let result = 0;
-  let len = arr.length;
-  if(len > 2) {
-    while (len > 0) {
-      // log(`arr.pop(len - 1)`, arr.pop(len - 1))
-      // log(`\nlen =`, len)
-      // log(`arr[len - 1]`, arr[len - 1])
-      // log(`Math.pow(10, len - 1)`, Math.pow(10, len - 1))
-      result += arr[len - 1] * Math.pow(10, len - 1);
-      len--;
-    }
-  } else {
-    const [x, y] = arr;
-    result = x * 10 + y;
-    // log(`result`, result)
-  }
-  return result;
-}
-
-const NumberToDigitsArray = (num = 1) => {
-  const result = [];
-  while (num > 0) {
-    result.push(num % 10);
-    num = parseInt(num / 10);
-  }
-  return result;
-}
-
-
-
-const NumberToNumberArray = (num = 1) => {
-  const result = [];
-  const len = Math.ceil(Math.log10(num + 1));
-  let temp = num;
-  for (let i = len; i > 0; i--) {
-    result.push(parseInt(temp / Math.pow(10, i - 1)));
-    temp -= result[len - i] * Math.pow(10, i - 1);
-  }
-  return result;
-}
-
-// const test = NumberToNumberArray(1234567);
-// const test = NumberToDigitsArray(1234567);
-
-// log(`test`, test)
-
-/**
- * @param {number} x
- * @return {boolean}
- */
 var isPalindrome = function(num) {
-  if(num < 0) {
-    return false;
-  } else {
-    const len = Math.ceil(Math.log10(num + 1));
-    // log(`len`, len)
-    if (len <= 1) {
-      return true;
-    } else {
-      // 双指针
-      // let left;
-      // let right;
-      // num to array ???
-      // 123 => [1, 2, 3];
-      // const arr = NumberToNumberArray(num).reverse();
-      // log(`num`, num)
-      // const arr = NumberToDigitsArray(num);
-      // log(`arr`, arr)
-      // const temp = DigitsArrayToNumber(arr);
-      // log(`temp`, temp)
-      const temp = DigitsArrayToNumber(NumberToDigitsArray(num));
-      if(num === temp) {
-        return true;
-      } else {
-        return false;
-      }
-    }
-  }
+  return (num < 0) ? false : Array.from(`${num}`).join() === Array.from(`${num}`).reverse().join();
 };
+
 
 // const test = isPalindrome(123);
 // const test1 = isPalindrome(-123);
