@@ -14,7 +14,7 @@
  * @augments
  * @example
  * @link
- * @solutions
+ * @solutions https://leetcode.com/submissions/detail/383551624/
  *
  */
 
