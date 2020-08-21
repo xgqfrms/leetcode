@@ -9,6 +9,7 @@
  * @modified
  *
  * @description
+ * @description 大数相乘 算法
  * @difficulty Medium
  * @complexity O(n)
  * @augments
