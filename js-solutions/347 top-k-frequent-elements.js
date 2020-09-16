@@ -14,6 +14,7 @@
  * @augments
  * @example
  * @link https://leetcode.com/problems/top-k-frequent-elements/
+ * @link https://leetcode-cn.com/problems/top-k-frequent-elements/
  * @solutions
  *
  */
