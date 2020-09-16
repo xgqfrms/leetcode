@@ -14,6 +14,7 @@
  * @augments
  * @example
  * @link https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
+ * @link https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/
  * @solutions
  *
  */
@@ -27,12 +28,10 @@ const log = console.log;
 
 var maxProfit = function(prices) {
   let max = 0;
-  let temp = 0;
   for (let i = 1; i < prices.length; i++) {
     if (prices[i] > prices[temp]) {
-      max += prices[i] - prices[temp];
+      max += prices[i] - prices[i - 1];
     }
-    temp++;
   }
   return max;
 };

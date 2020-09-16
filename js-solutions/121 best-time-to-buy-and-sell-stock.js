@@ -14,6 +14,7 @@
  * @augments
  * @example
  * @link https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+ * @link https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/
  * @solutions
  *
  */
