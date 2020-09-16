@@ -9,8 +9,8 @@
  * @modified
  *
  * @description 快速排序 quicksort
- * @difficulty Easy Medium Hard
- * @complexity O(n)
+ * @difficulty Medium
+ * @complexity O(n*log(n))
  * @augments
  * @example
  * @link https://github.com/xgqfrms/leetcode/issues/7#issuecomment-669991209
