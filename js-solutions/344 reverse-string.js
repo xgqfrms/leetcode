@@ -17,6 +17,8 @@
  * @link https://leetcode-cn.com/problems/reverse-string/
  * @solutions
  *
+ * @best_solutions https://leetcode.com/submissions/detail/398755148/
+ *
  */
 
 const log = console.log;
