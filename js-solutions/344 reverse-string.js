@@ -29,10 +29,11 @@ const log = console.log;
  */
 var reverseString = function(s) {
   let len = Math.floor(s.length / 2);
-  if(s.length % 2 === 0) {
-    len -= 1;
-  }
-  for(let i = 0; i <= len; i++) {
+  // if(s.length % 2 === 0) {
+  //   len -= 1;
+  // }
+  // for(let i = 0; i <= len; i++) {
+  for(let i = 0; i < len; i++) {
     // ES6 swap, more faster 🚀
     [
       s[s.length - i - 1],
