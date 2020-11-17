@@ -15,6 +15,7 @@
  * @augments
  * @example 字节跳动面试题 2轮算法
  * @link https://leetcode.com/problems/number-of-islands/
+ * @link https://leetcode-cn.com/problems/number-of-islands/
  * @solutions
  *
  */

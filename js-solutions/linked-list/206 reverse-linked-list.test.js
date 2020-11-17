@@ -5,7 +5,7 @@
  * @author xgqfrms
  * @license MIT
  * @copyright xgqfrms
- * @created 2020-08-017
+ * @created 2020-08-17
  * @modified
  *
  * @description 206 reverse-linked-list

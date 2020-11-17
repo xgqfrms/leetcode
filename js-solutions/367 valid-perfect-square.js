@@ -13,9 +13,8 @@
  * @complexity O(n)
  * @augments
  * @example
- * @link https://leetcode.com/problems/valid-square/
- * @link https://leetcodee-cn.com/problems/valid-square/
- * @link https://leetcode.com/explore/challenge/card/november-leetcoding-challenge/565/week-2-november-8th-november-14th/3527/
+ * @link https://leetcode.com/problems/valid-perfect-square/
+ * @link https://leetcodee-cn.com/problems/valid-perfect-square/
  * @solutions
  *
  */

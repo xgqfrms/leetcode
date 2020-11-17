@@ -42,9 +42,11 @@ var validSquare = function(p1, p2, p3, p4) {
       min,
       max,
     ] = args[i];
-    minValues.push(min);
-    maxValues.push(max);
-    absValues.push(Math.abs(max - min));
+    minValues.push(Math.abs(min));
+    maxValues.push(Math.abs(max));
+    // minValues.push(min);
+    // maxValues.push(max);
+    absValues.push(Math.abs(Math.abs(max) - Math.abs(min)));
   }
   const min = minValues.sort((a, b) => a > b ? 1 : -1)[0];
   const max = maxValues.sort((a, b) => a > b ? -1 : 1)[0];
@@ -52,8 +54,8 @@ var validSquare = function(p1, p2, p3, p4) {
   // log(`min =`, min)
   // log(`max =`, max)
   // log(`abs =`, absValues)
-  log(`sum / 2 === max - min`, sum / 2, (max - min));
-  log(`sum === 2 * (max - min)`, sum , 2 * (max - min));
+  // log(`sum / 2 === max - min`, sum / 2, (max - min));
+  // log(`sum === 2 * (max - min)`, sum , 2 * (max - min));
   if(sum === 2 * (max - min)) {
   // if((sum / 2) === (max - min)) {
     result = true;
@@ -66,7 +68,9 @@ var validSquare = function(p1, p2, p3, p4) {
 // const p1 = [50, 50], p2 = [50, 100], p3 = [100, 50], p4 = [100, 100];
 // const p1 = [25, 25], p2 = [75, 25], p3 = [25, 75], p4 = [75, 75];
 
-const p1 = [6987,-473], p2 = [6985,-473], p3 = [6986,-472], p4 = [6986,-474];
+const p1 = [5, -3], p2 = [7, -3], p3 = [6, -2], p4 = [6, -4];
+
+// const p1 = [6987,-473], p2 = [6985,-473], p3 = [6986,-472], p4 = [6986,-474];
 
 const test = validSquare(p1, p2, p3, p4);
 
