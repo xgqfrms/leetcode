@@ -49,6 +49,12 @@ var generateParenthesis = function(n) {
   return result;
 };
 
+const test = generateParenthesis(3);
+
+const assert = ["((()))","(()())","(())()","()(())","()()()"];
+
+log(`test =`,  JSON.stringify(test) ===  JSON.stringify(assert) ? `✅` : `❌`);
+// test = ✅
 
 
 /*
