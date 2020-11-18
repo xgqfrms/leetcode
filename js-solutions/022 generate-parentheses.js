@@ -8,7 +8,8 @@
  * @created 2020-11-16
  * @modified
  *
- * @description generate-parentheses
+ * @description 22. Generate Parentheses
+ * @description 22. 产生括号 ✅
  * @difficulty Medium
  * @complexity O(n)
  * @augments
@@ -30,12 +31,20 @@ const log = console.log;
 var generateParenthesis = function(n) {
   // 括号组合
   const result = [];
-  for(let i = 0; i < n; i++) {
-    let temp = ``;
-    for(let j = 0; j < n; j++) {
-      temp += `()`;
+  // DFS, 深度优先搜索
+  dfs(0, 0, n, ``);
+  function dfs(left, right, n, temp) {
+    if (left === n && right === n) {
+      result.push(temp);
     }
-    result.push(temp);
+    if (left < n) {
+      // 左括号, 递归
+      dfs(left + 1, right, n, temp + `(`);
+    }
+    if (left > right && right < n) {
+      // 右括号, 递归
+      dfs(left, right + 1, n, temp + `)`);
+    }
   }
   return result;
 };
@@ -45,10 +54,10 @@ var generateParenthesis = function(n) {
 /*
 输入：n = 3
 输出：[
-       "((()))",
-       "(()())",
-       "(())()",
-       "()(())",
-       "()()()"
-     ]
+    "((()))",
+    "(()())",
+    "(())()",
+    "()(())",
+    "()()()"
+  ]
 */
