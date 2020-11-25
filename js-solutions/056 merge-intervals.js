@@ -36,7 +36,15 @@ var merge = function(intervals) {
     return intervals || [];
   }
   // sort
-  intervals.sort(([a0], [b0]) => a0 > b0 ? 1 : -1);
+  // intervals.sort(([a0], [b0]) => a0 > b0 ? 1 : -1);
+  intervals.sort(([a0, a1], [b0, b1]) => {
+    if(a0 !== b0) {
+      return a0 > b0 ? 1 : -1;
+    } else {
+      // sort second
+      return a1 > b1 ? 1 : -1;
+    }
+  });
   const map = new Map();
   let temp = intervals[0];
   for (let i = 1; i < intervals.length; i++) {
