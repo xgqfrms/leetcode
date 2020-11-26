@@ -5,7 +5,7 @@
  * @author xgqfrms
  * @license MIT
  * @copyright xgqfrms
- * @created 2020-11-26
+ * @created 2020-11-25
  * @modified
  *
  * @description 56. Merge Intervals
@@ -109,3 +109,11 @@ const test5 = merge(intervals5);
 log(`test5 =`, test5);
 // [[1,5]]
 log(`test =`, JSON.stringify(test5) === JSON.stringify([[1,5]]) ? `✅` : `❌`);
+
+
+const intervals6 = [[1,4], [0,4]];
+const test6 = merge(intervals5);
+log(`test6 =`, test6);
+// [[0,4]]
+log(`test =`, JSON.stringify(test6) === JSON.stringify([[0,4]]) ? `✅` : `❌`);
+
