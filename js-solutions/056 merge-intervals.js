@@ -68,9 +68,16 @@ var merge = function(intervals) {
       map.set(JSON.stringify([a0, a1]))
       temp = [a0, a1];
     } else {
-      result.push([a0, a1]);
-      map.set(JSON.stringify([a0, a1]))
-      temp = [a0, a1];
+      if(a0 <= t1 && a0 >= t0 && a1 >= t1) {
+        // merge
+        result.push([t0, a1]);
+        map.set(JSON.stringify([t0, a1]))
+        temp = [t0, a1];
+      } else {
+        result.push([a0, a1]);
+        map.set(JSON.stringify([a0, a1]))
+        temp = [a0, a1];
+      }
     }
   }
   return result;
@@ -112,8 +119,15 @@ log(`test =`, JSON.stringify(test5) === JSON.stringify([[1,5]]) ? `✅` : `❌`)
 
 
 const intervals6 = [[1,4], [0,4]];
-const test6 = merge(intervals5);
+const test6 = merge(intervals6);
 log(`test6 =`, test6);
 // [[0,4]]
 log(`test =`, JSON.stringify(test6) === JSON.stringify([[0,4]]) ? `✅` : `❌`);
 
+
+
+const intervals7 = [[1,4],[2,3]];
+const test7 = merge(intervals7);
+log(`test7 =`, test7);
+// [[1,4]]
+log(`test =`, JSON.stringify(test7) === JSON.stringify([[1,4]]) ? `✅` : `❌`);
